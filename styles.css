@@ -2,8 +2,9 @@
 
 :root {
   --main-color: white;
-  --secondary-color: blue;
-  --third-color: green;
+  --secondary-color: rgb(25,146,212);
+  --third-color: rgb(240,180,41);
+  --content-background: rgb(226,232,240);
 }
 
 * {
@@ -12,4 +13,49 @@
   box-sizing: border-box;
   list-style: none;
   font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 130px 1fr;
+}
+
+.dashboard-container {
+  background-color: var(--secondary-color);
+  color: white;
+  height: 100vh;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: repeat(12, 30px);
+  font-weight: 600;
+  padding: 16px;
+  align-items: center;
+}
+
+
+.dashboard-container p {
+  font-size: 1.2rem;
+}
+
+.dashboard-container img[src="img/view-dashboard.svg"] {
+  width: 35px;
+}
+
+.dashboard-container img {
+  filter: invert(1);
+  width: 18px;
+  justify-self: center;
+}
+
+.dashboard-container a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.main-content-container {
+  background-color: var(--content-background);
 }
