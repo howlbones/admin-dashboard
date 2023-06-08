@@ -205,12 +205,12 @@ textarea:focus, input:focus {
   background-color: white;
   display: grid;
   grid-template-columns: 8px 1fr;
-  grid-template-rows: 35px 1fr 35px;
+  grid-template-rows: 45px 1fr 35px;
   box-shadow: var(--shadow);
   border-radius: 8px;
   padding-right: 15px;
   row-gap: 5px;
-  column-gap: 15px;
+  column-gap: 20px;
 }
 
 .green-line {
@@ -237,6 +237,27 @@ textarea:focus, input:focus {
 
 .announcements-container {
   margin-top: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1px 1fr 1px 1fr;
+  padding: 16px 25px;
+  padding-bottom: 20px;
+}
+
+.announcements-container h5 {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.announcements-container p {
+  font-size: 0.7rem;
+}
+
+.announcements-container hr {
+  border-style: none;
+  background-color: #cecece;
+  height: 1px;
 }
 
 .right-side {
@@ -250,4 +271,39 @@ textarea:focus, input:focus {
   align-self: end;
   padding-top: 30px;
   padding-bottom: 10px;
+}
+
+.trending-container {
+  padding: 16px 25px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.trending-container img {
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.trending-container .item {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.trending-container .username {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.trending-container .project-name {
+  color: rgb(114, 114, 114);
+  font-size: 0.8rem;
+  font-weight: 400;
 }
