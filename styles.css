@@ -26,17 +26,28 @@ body {
   color: white;
   height: 100vh;
   grid-row: 1 / span 2;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  grid-template-rows: repeat(12, 30px);
   font-weight: 600;
   padding: 16px;
-  align-items: center;
 }
 
+.dashboard-container .item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.dashboard-container .item:nth-child(1) {
+  margin-bottom: 30px;
+}
+
+.dashboard-container .item:nth-child(7) {
+  margin-bottom: 30px;
+}
 
 .dashboard-container p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .dashboard-container img[src="img/view-dashboard.svg"] {
@@ -47,13 +58,20 @@ body {
   filter: invert(1);
   width: 18px;
   justify-self: center;
+  position: relative;
+  bottom: 2px;
 }
 
 .dashboard-container a {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
+  align-self: end;
+  transition: 0.2s;
+}
+
+.dashboard-container a:hover {
+  color: rgb(229, 226, 255);
 }
 
 .main-content-container {
