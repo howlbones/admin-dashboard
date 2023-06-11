@@ -2,9 +2,9 @@
 
 :root {
   --main-color: white;
-  --secondary-color: rgb(25,146,212);
-  --third-color: rgb(240,180,41);
-  --content-background: rgb(226,232,240);
+  --secondary-color: rgb(25, 146, 212);
+  --third-color: rgb(240, 180, 41);
+  --content-background: rgb(226, 232, 240);
   --inset-shadow: inset 3px 3px 5px rgb(207, 207, 207);
   --shadow: 3px 3px 5px rgb(209, 209, 209);
 }
@@ -83,7 +83,7 @@ body {
 .header-container {
   display: grid;
   grid-template-columns: 1fr 300px;
-  grid-template-rows: 40px 1fr ;
+  grid-template-rows: 40px 1fr;
   gap: 25px;
   padding: 15px 40px;
 }
@@ -110,7 +110,8 @@ body {
   max-width: 600px;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
 }
 
@@ -121,6 +122,10 @@ textarea:focus, input:focus {
   gap: 20px;
 }
 
+.profile-info-container img {
+  cursor: pointer;
+}
+
 .profile-info-container img[alt="Profile picture"] {
   height: 40px;
   border-radius: 50%;
@@ -128,6 +133,7 @@ textarea:focus, input:focus {
 
 .profile-info-container p {
   font-weight: 700;
+  cursor: pointer;
 }
 
 .greeting-container {
@@ -229,10 +235,17 @@ textarea:focus, input:focus {
 }
 
 .card .card-actions {
-  height: 0px;
   display: flex;
   gap: 20px;
   justify-self: end;
+  cursor: pointer;
+}
+
+.card .card-actions img:hover {
+  transition: 0.3s;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: ;
 }
 
 .announcements-container {
@@ -246,6 +259,7 @@ textarea:focus, input:focus {
 }
 
 .announcements-container h5 {
+  cursor: pointer;
   font-size: 0.8rem;
   margin-bottom: 4px;
 }
@@ -290,7 +304,7 @@ textarea:focus, input:focus {
 
 .trending-container .item {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: 16px;
   cursor: pointer;
@@ -306,4 +320,68 @@ textarea:focus, input:focus {
   color: rgb(114, 114, 114);
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+/* Mobile Version */
+
+@media only screen and (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-container {
+    height: auto;
+  }
+
+  .header-container {
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: auto auto;
+  }
+
+  .search-container {
+    grid-column: 1 / span 2;
+  }
+
+  .search-container img {
+    height: 30px;
+    width: auto;
+  }
+
+  .greeting-container {
+    display: none;
+  }
+
+  .header-buttons-container {
+    width: auto;
+    grid-row: 2;
+
+  }
+
+  .profile-info-container {
+    justify-self: end;
+    width: auto;
+    grid-row: 2;
+    grid-column: 2;
+    gap: 10px;
+  }
+
+  .profile-info-container p {
+    display: none;
+  }
+
+  .profile-info-container img[alt="Notification icon"] {
+    height: 30px;
+  }
+
+  .search-container input {
+    width: auto;
+    max-width: none;
+    min-width: none;
+  }
+
+  .header-buttons-container button {
+    height: 50px;
+    border-radius: 25px;
+  }
+
 }
