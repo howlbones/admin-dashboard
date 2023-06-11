@@ -42,6 +42,10 @@ body {
   padding-bottom: 20px;
 }
 
+.dashboard-container img[alt="Open menu icon"] {
+  display: none;
+}
+
 .dashboard-container .item:nth-child(1) {
   margin-bottom: 30px;
 }
@@ -325,8 +329,13 @@ input:focus {
 /* Mobile Version */
 
 @media only screen and (max-width: 800px) {
+  :root {
+    font-size: 20px;
+  }
+
   body {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
   }
 
   .dashboard-container {
@@ -354,7 +363,7 @@ input:focus {
   .header-buttons-container {
     width: auto;
     grid-row: 2;
-
+    gap: 15px;
   }
 
   .profile-info-container {
@@ -362,7 +371,7 @@ input:focus {
     width: auto;
     grid-row: 2;
     grid-column: 2;
-    gap: 10px;
+    gap: 15px;
   }
 
   .profile-info-container p {
@@ -371,6 +380,10 @@ input:focus {
 
   .profile-info-container img[alt="Notification icon"] {
     height: 30px;
+  }
+
+  .search-container {
+    margin-top: 10px;
   }
 
   .search-container input {
@@ -382,6 +395,100 @@ input:focus {
   .header-buttons-container button {
     height: 50px;
     border-radius: 25px;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+
+  .main-content-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content-container h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .left-side {
+    margin-bottom: 30px;
+  }
+
+  .left-side .card {
+    grid-template-columns: 8px 1fr;
+    grid-template-rows: 45px 1fr 65px;
+  }
+
+  .left-side .card .card-actions {
+    gap: 50px;
+  }
+
+  .main-content-container .left-side img {
+    height: 45px;
+    margin-bottom: 15px;
+  }
+
+  .announcements-container {
+    margin: 0px;
+  }
+
+  .announcements-container.card p {
+    font-size: 0.9rem;
+  }
+
+  .announcements-container.card h5 {
+    font-size: 1rem;
+  }
+
+  .trending-container.card p {
+    font-size: 1rem;
+  }
+
+  .trending-container .item img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+
+  .dashboard-container .item {
+    grid-template-columns: 30px 1fr 50px;
+    padding-bottom: 0px;
+  }
+
+  .dashboard-container img[alt="Open menu icon"] {
+    display: block;
+    grid-column: 3;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .dashboard-container img {
+    justify-self: center;
+    height: 30px;
+    width: 30px;
+  }
+
+  .dashboard-container .item:nth-child(n+2) {
+    display: none;
+    justify-content: end;
+    flex-direction: row-reverse;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 15px;
+    font-size: 1.4rem;
+    gap: 50px;
+  }
+
+  .dashboard-container {
+    height: auto;
+  }
+
+  .dashboard-container .item:nth-child(1) {
+    margin-bottom: 0px;
   }
 
 }
